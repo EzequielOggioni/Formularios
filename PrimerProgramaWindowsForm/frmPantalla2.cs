@@ -21,7 +21,34 @@ namespace PrimerProgramaWindowsForm
 
         private void FrmPantalla2_Load(object sender, EventArgs e)
         {
-           
+            this.cmbPais.SelectedIndex = 5;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            foreach(Control  radio in  grbNacionalidad.Controls)
+            {
+                if(radio is RadioButton && ((RadioButton)radio).Checked)
+                {
+                    MessageBox.Show(radio.Text);
+                }
+
+
+            }
+
+
+            string salida ="";
+            foreach (object item in this.lstPosicion.SelectedItems)
+                {
+                salida += item.ToString();
+            };
+            MessageBox.Show(
+                salida
+                
+             //this.chkEnviaPublicidad.Checked.ToString()
+             //this.rdoArgentino.Checked ? "Argentino" : "Extranjero"
+           );
         }
     }
 }

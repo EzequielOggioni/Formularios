@@ -52,7 +52,7 @@ namespace PrimerProgramaWindowsForm
             FrmPantalla2 frmPantalla3 = new FrmPantalla2();
             FrmPantalla2 frmPantalla4 = new FrmPantalla2();
             frmOwner.Show();
-            frmPantalla4.MdiParent = this;
+            frmPantalla4.MdiParent = this;            
             frmPantalla4.Show();
             frmPantalla2.Show(frmOwner);
             frmPantalla3.Show();
