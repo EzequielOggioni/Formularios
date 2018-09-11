@@ -24,14 +24,14 @@ namespace PrimerProgramaWindowsForm
             this.cmbPais.SelectedIndex = 5;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            foreach(Control  radio in  grbNacionalidad.Controls)
+            foreach(Control  radio in grbEstadoCivil.Controls)
             {
                 if(radio is RadioButton && ((RadioButton)radio).Checked)
                 {
-                    MessageBox.Show(radio.Text);
+                    MessageBox.Show("radio = " + radio.Text);
                 }
 
 
@@ -41,14 +41,15 @@ namespace PrimerProgramaWindowsForm
             string salida ="";
             foreach (object item in this.lstPosicion.SelectedItems)
                 {
-                salida += item.ToString();
+                salida += item.ToString()  + " ";
             };
-            MessageBox.Show(
-                salida
-                
-             //this.chkEnviaPublicidad.Checked.ToString()
-             //this.rdoArgentino.Checked ? "Argentino" : "Extranjero"
-           );
+            MessageBox.Show("Listbox= " + salida);
+            MessageBox.Show("CheckBox= " + this.chkEnviaPublicidad.Checked.ToString());
+
+            MessageBox.Show("Radio= " + (this.rdoArgentino.Checked ? "Argentino" : "Extranjero"));
+
+            MessageBox.Show("TextBox= " + this.txtNombre.Text);
+
         }
     }
 }
